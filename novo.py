@@ -18,5 +18,7 @@ for item in soup.find_all('article', attrs={'class': 'set'}):
     }
     kits_list.append(details)
 
+pip install openpyxl
+
 df_kits = pandas.DataFrame.from_dict(kits_list)
 df_kits.to_excel('./dados.xlsx')
